@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * times_table - Prints the 9 time table, starting with 0
+ * add - adds a and b
  * @a: parameter to be added
  * @b: parameter to be added
  *
