@@ -13,6 +13,6 @@ int _isalpha(int c)
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		val = 1;
 	else
-		val = 0;	
-	return val;		
+		val = 0;
+	return (val);
 }
