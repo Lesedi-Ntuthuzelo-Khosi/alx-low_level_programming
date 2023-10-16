@@ -3,10 +3,9 @@
 
 /**
  * print_long - prints a long number
- * @value: number tp be printed
- *
  * print_times_table - prints the n times table starting with 0
  * @n: parameter to accept n
+ * @value: value to be printed
  *
  * Return: does not return anything
  */
@@ -20,17 +19,26 @@ void print_times_table(int n)
 
 		for (a = 0; a <= n; a++)
 		{
-			for (b = 0; b <= n; b++)
+			_putchar('0');
+
+			for (b = 1; b <= n; b++)
 			{
+				_putchar(44);
+				_putchar(32);
+
 				prod = a * b;
+
+				if (prod <= 99)
+					_putchar(32);
+				if (prod <= 9)
+					_putchar(32);
+
 				if (prod == 0)
 					_putchar('0' + prod);
 				else
 					print_long(prod);
 				if (b == n)
 					continue;
-				_putchar(44);
-				_putchar(32);
 			}
 		_putchar('\n');
 		}
