@@ -14,8 +14,6 @@ int _strlen(char *s)
 	while (s[i] != '\0')
 	{
 		i++;
-		if (i > 18)
-			break;
 	}
 	return (i);
 }
