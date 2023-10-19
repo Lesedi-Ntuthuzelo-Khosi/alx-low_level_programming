@@ -18,9 +18,10 @@ void rev_string(char *s)
 {
 	int len = _strlen(s);
 	int width = len;
-	char holder[width];
+#define WIDTH len
+	char holder[WIDTH];
 	int i = 0, g = len - 1;
-
+	printf("String length: %d\n", width);
 	while( i < len)
 	{
 		holder[i] = s[g];

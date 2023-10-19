@@ -8,8 +8,8 @@
 void rev_string(char *s)
 {
 	int len = _strlen(s);
-	int width = len;
-	char holder[width];
+/*	int width = len;  */
+	char holder[100];
 	int i = 0, g = len - 1;
 
 	while( i < len)
