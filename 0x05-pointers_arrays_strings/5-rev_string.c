@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * rev_string: reverses a string
+ *rev_string: reverses a string
  *@s: string to be reversed
  *
  */
@@ -12,7 +12,7 @@ void rev_string(char *s)
 	char holder[892];
 	int i = 0, g = len - 1;
 
-	while( i < len)
+	while (i < len)
 	{
 		holder[i] = s[g];
 		g--;
@@ -20,7 +20,7 @@ void rev_string(char *s)
 	}
 
 	i = 0;
-	while(i < len)
+	while (i < len)
 	{
 		s[i] = holder[i];
 		i++;
@@ -29,14 +29,14 @@ void rev_string(char *s)
 
 /**
  * _strlen - calculates the length of the string
- * @s: string 
+ * @s: string
  *
  * Return: returns the length of the strings
  */
 int _strlen(char *s)
 {
 	int i = 0;
-	
+
 	while (s[i] != '\0')
 	{
 		i++;
