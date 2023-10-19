@@ -1,14 +1,48 @@
 #include <stdio.h>
+#include "main.h"
+#include <unistd.h>
 
 int main(void)
 {
-	char s = "Young man with a big heart";
-	char *store;
+	char s[10] = "My School";
+	printf("Name is: %s\n", s);
 
-	store = &s;
+	rev_string(s);
 
-	printf("string: %s\n", s);
-	printf("Store: %s", store);
+	printf("Name is: %s\n", s);
 
 	return (0);
+}
+
+void rev_string(char *s)
+{
+	int len = _strlen(s);
+	int width = len;
+	char holder[width];
+	int i = 0, g = len - 1;
+
+	while( i < len)
+	{
+		holder[i] = s[g];
+		g--;
+		i++;
+	}
+
+	i = 0;
+	while(i < len)
+	{
+		s[i] = holder[i];
+		i++;
+	}
+}
+
+int _strlen(char *s)
+{
+	int i = 0;
+	
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }

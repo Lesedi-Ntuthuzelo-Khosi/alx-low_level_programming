@@ -1,18 +1,45 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * puts2 - Prints one char out of two of a string.
- * @str: The string containing characters.
+ * rev_string: reverses a string
+ *@s: string to be reversed
+ *
  */
-void puts2(char *str)
+void rev_string(char *s)
 {
-	int index = 0, len = 0;
+	int len = _strlen(s);
+	int width = len;
+	char holder[width];
+	int i = 0, g = len - 1;
 
-	while (str[index++])
-		len++;
+	while( i < len)
+	{
+		holder[i] = s[g];
+		g--;
+		i++;
+	}
 
-	for (index = 0; index < len; index += 2)
-		_putchar(str[index]);
+	i = 0;
+	while(i < len)
+	{
+		s[i] = holder[i];
+		i++;
+	}
+}
 
-	_putchar('\n');
+/**
+ * _strlen - calculates the length of the string
+ * @s: string 
+ *
+ * Return: returns the length of the strings
+ */
+int _strlen(char *s)
+{
+	int i = 0;
+	
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
