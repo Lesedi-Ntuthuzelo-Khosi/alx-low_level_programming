@@ -14,7 +14,7 @@ int is_prime_number(int n)
 
 	if (n <= 1)
 		return (0);
-	else if (n >= 2 && n <= 3)
+	if (n >= 2 && n <= 3)
 		return (1);
 	return (div_check(n, divide));
 }
@@ -29,7 +29,7 @@ int div_check(int num, int div)
 {
 	if (num % div == 0)
 		return (0);
-	else if (div == num / 2)
+	if (div == num / 2)
 		return (1);
 	return (div_check(num, div + 1));
 }
