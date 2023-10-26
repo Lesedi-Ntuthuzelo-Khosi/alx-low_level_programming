@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *_strcat - receives a two strings that it concatenates
+ *_strncat - receives a two strings that it concatenates
  *@dest: string to be concatenated
  *@src: string to be concatenated
  *@n: n bytes to be used from src
@@ -25,7 +25,9 @@ char *_strncat(char *dest, char *src, int n)
 		j++;
 		i++;
 		if (i == n)
+		{
 			break;
+		}
 	}
 	return (dest);
 }
