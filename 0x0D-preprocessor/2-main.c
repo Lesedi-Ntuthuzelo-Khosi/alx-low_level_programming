@@ -1,6 +1,5 @@
-#include "main.h"
+#include <stdio.h>
 
-int _putchar(char c);
 /**
  * main -  prints the name of the file it was compiled from,
  *		followed by a new line.
@@ -11,6 +10,6 @@ int main(void)
 {
 	char *s = __FILE__;
 
-	_putchar(s[3]);
+	printf("%s\n", s);
 	return (0);
 }
